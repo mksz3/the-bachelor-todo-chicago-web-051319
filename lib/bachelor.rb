@@ -56,5 +56,5 @@ def get_average_age_for_season(data, season)
       count += 1
     }
   }
-  (avg / count.to_f).round(0) + 1
+  (avg / count.to_f).round(0)
 end
