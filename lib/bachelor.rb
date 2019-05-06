@@ -60,10 +60,8 @@ def get_average_age_for_season(data, season)
   avg = 0
   count = 0
   data[season].each { |obj, contestants| 
-    contestants.each { |contestant| 
       avg += (contestant["age"]).to_i
       count += 1
-    }
   }
   (avg / count.to_f).round
 end
