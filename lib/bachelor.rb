@@ -55,8 +55,8 @@ def get_average_age_for_season(data, season)
       avg += (contestant["age"]).to_i
       count += 1
     }
-    print avg 
-    print count
   }
+  print "avg = " + avg
+  print "count  = " +count 
   ((avg / count.to_f).round(2)).round(0)
 end
