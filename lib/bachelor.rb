@@ -47,23 +47,23 @@ def get_occupation(data, hometown)
   }
 end
 
-def get_average_age_for_season(data, season)
-  age_total = 0
-  num_of_contestants = 0
-  data[season].each do |contestant_hash|
-    age_total += (contestant_hash["age"]).to_i
-    num_of_contestants += 1
-  end
-  (age_total / num_of_contestants.to_f).round(0)
-end
 # def get_average_age_for_season(data, season)
-#   avg = 0
-#   count = 0
-#   data.each { |season, contestants| 
-#     contestants.each { |contestant| 
-#       avg += (contestant["age"]).to_i
-#       count += 1
-#     }
-#   }
-#   (avg / count.to_f).round
+#   age_total = 0
+#   num_of_contestants = 0
+#   data[season].each do |contestant_hash|
+#     age_total += (contestant_hash["age"]).to_i
+#     num_of_contestants += 1
+#   end
+#   (age_total / num_of_contestants.to_f).round(0)
 # end
+def get_average_age_for_season(data, season)
+  avg = 0
+  count = 0
+  data[season].each { |obj, contestants| 
+    contestants.each { |contestant| 
+      avg += (contestant["age"]).to_i
+      count += 1
+    }
+  }
+  (avg / count.to_f).round
+end
