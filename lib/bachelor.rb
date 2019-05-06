@@ -56,8 +56,7 @@ def get_average_age_for_season(data, season)
       count += 1
     }
   }
-  (avg / count)
-  
+  avg / count
 end
 # { 
 #   "season 30": [
